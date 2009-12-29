@@ -42,7 +42,7 @@ or where global `ajaxSettings` have been defined and are being used.
 
 To replace the built-in ajax function with the respond to function add this line:
 
-    $.ajax = $.respondTo;
+    jQuery.ajax = jQuery.respondTo;
 
 
 ## Examples
@@ -66,7 +66,6 @@ Using the typical `success` callback but with the new arguments:
     $.respondTo({
       url: '/people/37',
       success: function(data, contentType, status){
-        // process data, contentType and status
         // example values:
         //   data: {id: 20, title: "Another Blog Post"}
         //   contentType: "json"
