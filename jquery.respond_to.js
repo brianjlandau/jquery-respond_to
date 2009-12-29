@@ -209,6 +209,9 @@
   			// Fire the global callback
   			if ( s.global )
   				jQuery.event.trigger( "ajaxSuccess", [xhr, s] );
+  				
+			  if ($.isFunction(s[contentType]))
+  		    s[contentType]( data, statusCode );
   		}
 
   		function complete(){
