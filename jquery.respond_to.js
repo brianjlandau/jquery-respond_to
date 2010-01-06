@@ -14,6 +14,10 @@
  */
 
 (function($) {
+  function now(){
+  	return +new Date;
+  }
+  
   $.extend({
     respondToSetup: function( settings ) {
   		jQuery.extend( jQuery.ajaxSettings, settings );
