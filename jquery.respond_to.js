@@ -216,6 +216,8 @@
   				
 			  if ($.isFunction(s[contentType]))
   		    s[contentType]( data, statusCode );
+		    if (s['respondTo'] && $.isFunction(s['respondTo'][contentType]))
+  		    s['respondTo'][contentType]( data, statusCode );
   		}
 
   		function complete(){

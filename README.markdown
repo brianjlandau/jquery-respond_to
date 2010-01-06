@@ -72,6 +72,21 @@ Using the typical `success` callback but with the new arguments:
         //   status: 201
       }
     });
+    
+Replacing `$.ajax` with `$.respondTo` and using the alternate `respondTo` option syntax:
+
+    $.ajax = $.respondTo;
+    $.ajax({
+      url: "/people/37",
+      respondTo: {
+        html: function(html, status){
+          // handle HTML response
+        },
+        json: function(html, status){
+          // handle JSON response
+        }
+      }
+    });
 
 
 Copyright (c) 2009 Brian Landau & Matt Henry, released under the MIT license
